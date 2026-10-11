@@ -107,8 +107,23 @@ footer { border-top: 1px solid var(--ink); margin-top: 28px; padding: 20px 0 36p
   .nav-links { display: none; }
   .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 14px; right: 14px; background: var(--paper); border: 1px solid var(--ink); padding: 14px; z-index: 4; }
   nav.top { position: relative; }
-  .cover img, .cover { height: 92vh; }
-  .cover-copy { padding: 40px 16px 18px; }
+  .mast { display: none; }
+  .cover { background: transparent; }
+  .cover img { height: 42vh; object-position: 70% 40%; }
+  .cover-copy {
+    position: static;
+    padding: 18px 0 8px;
+    background: none;
+    color: var(--ink);
+  }
+  .cover-copy h1 { color: var(--ink); font-size: 46px; max-width: none; }
+  .cover-copy .role, .deck { color: var(--muted); }
+  .deck { font-size: 16px; }
+  .cover .btn { background: var(--ink); color: var(--paper); }
+  .ghost { color: var(--ink); border-color: var(--ink); }
+  .cover .disc { color: var(--muted); }
+  .cover-actions { flex-direction: column; }
+  .cover-actions a { justify-content: center; width: 100%; }
   .contents a { grid-template-columns: 32px 1fr; }
   .contents a em { grid-column: 2; }
   .grid3, .facts { grid-template-columns: 1fr; }
