@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Best cologne under $40</title>
+<meta name="description" content="Still worth wearing after lunch." />
+<link rel="canonical" href="https://menscents.com/occasions/under-40.html" />
+<meta property="og:title" content="Best cologne under $40" />
+<meta property="og:description" content="Still worth wearing after lunch." />
+<meta property="og:image" content="https://menscents.com/assets/MNlz4.jpg" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@420;520;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/site.css" />
+
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <a class="brand" href="../index.html">Menscents</a>
+    <button class="menu" type="button" aria-label="Menu">Menu</button>
+    <div class="nav-links">
+      <a href="../compare.html">The big three</a>
+      <a href="../occasions/work.html">Occasions</a>
+      <a href="../clones.html">Cheaper bottles</a>
+      <a href="../methodology.html">How we test</a>
+    </div>
+    <a class="btn" href="../index.html#find">Find a scent</a>
+  </nav>
+  <div class="mast"><span>Men's cologne, with an opinion</span><span>Smell it before you spend</span></div>
+  
+<header class="sec" style="padding-top:28px">
+  <p class="role">Occasion</p>
+  <h1>Best cologne under $40</h1>
+  <p class="lede">Still worth wearing after lunch.</p>
+</header>
+<div class="grid3">
+  
+  <article class="card pick">
+    <div class="role">First pick</div>
+    <h3>Asad</h3>
+    <p class="muted">The cheaper bottle to test if Sauvage Elixir was the brief. Sweeter and rougher at the start. Not the same product.</p>
+    <div class="meta"><span>$0.10 a wear</span><span>Skip if you wanted the polish of the original. The opening is rougher.</span></div>
+    <div class="actions">
+      <a class="primary" href="../bottle/asad.html">The call</a>
+      <a data-track="sample" data-bottle="asad" href="https://www.scentsplit.com/search?q=lattafa+asad">Sample</a>
+    </div>
+    <p class="disc">We may earn a commission if you buy through these links.</p>
+  </article>
+  
+  <article class="card ">
+    <div class="role">Also</div>
+    <h3>Club de Nuit Intense</h3>
+    <p class="muted">The famous cheaper take on Aventus. Smoky pineapple, a rough opening, then wearable. Batch variation is real.</p>
+    <div class="meta"><span>$0.13 a wear</span><span>Skip if a harsh first ten minutes will annoy you.</span></div>
+    <div class="actions">
+      <a class="primary" href="../bottle/cdnim.html">The call</a>
+      <a data-track="sample" data-bottle="cdnim" href="https://www.scentsplit.com/search?q=armaf+club+de+nuit+intense">Sample</a>
+    </div>
+    <p class="disc">We may earn a commission if you buy through these links.</p>
+  </article>
+  
+  <article class="card ">
+    <div class="role">Also</div>
+    <h3>Woody dupe</h3>
+    <p class="muted">A cheaper woody in the Bleu lane. Shorter life, cleaner, fine for an office that does not need the real bottle.</p>
+    <div class="meta"><span>$0.23 a wear</span><span>Skip if you need the incense in Bleu. This gets the shape and misses that.</span></div>
+    <div class="actions">
+      <a class="primary" href="../bottle/dossier-woody.html">The call</a>
+      <a data-track="sample" data-bottle="dossier-woody" href="https://dossier.co/">Sample</a>
+    </div>
+    <p class="disc">We may earn a commission if you buy through these links.</p>
+  </article>
+  
+</div>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <div>
+        <a class="brand" href="../index.html">Menscents</a>
+        <p><a href="../about.html">About</a> · <a href="../disclosure.html">Affiliate disclosure</a> · <a href="../privacy.html">Privacy</a> · <a href="../methodology.html">Methodology</a></p>
+      </div>
+      <form class="capture" action="#" method="POST">
+        <input type="email" name="email" placeholder="Email" required />
+        <button class="btn" type="submit">Get the weekly pick</button>
+      </form>
+    </div>
+    <p>One pick a week, with what it costs to wear.</p>
+    <p class="disc">If you buy through a link, Menscents may earn a commission at no extra cost to you. We do not sell the bottle.</p>
+  </footer>
+</div>
+<script>
+document.querySelector('.menu')?.addEventListener('click', function(){
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+document.querySelectorAll('a[data-track]').forEach(function(a){
+  a.addEventListener('click', function(){
+    if (window.gtag) gtag('event', 'outbound_click', {bottle: a.dataset.bottle || '', retailer: a.dataset.retailer || '', kind: a.dataset.track});
+  });
+});
+document.querySelectorAll('form.capture').forEach(function(form){
+  form.addEventListener('submit', function(e){
+    if (!form.action || form.action.endsWith('#')) {
+      e.preventDefault();
+      var note = form.parentElement.querySelector('.disc') || form.nextElementSibling;
+      if (note) note.textContent = 'List is not connected yet. Drop the provider URL into data/site.yaml.';
+    }
+  });
+});
+</script>
+</body>
+</html>

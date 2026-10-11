@@ -3,37 +3,75 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>About — Menscents</title>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,460;9..144,560&family=Outfit:wght@420;520;600&display=swap" rel="stylesheet" />
+<title>About: Menscents</title>
+<meta name="description" content="About" />
+<link rel="canonical" href="https://menscents.com/about.html" />
+<meta property="og:title" content="About: Menscents" />
+<meta property="og:description" content="About" />
+<meta property="og:image" content="https://menscents.com/assets/MNlz4.jpg" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@420;520;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/site.css" />
+
 </head>
 <body>
 <div class="wrap">
   <nav class="top">
-    <a class="brand" href="index.html"><strong>Menscents</strong><span>The desk</span></a>
+    <a class="brand" href="index.html">Menscents</a>
+    <button class="menu" type="button" aria-label="Menu">Menu</button>
     <div class="nav-links">
       <a href="compare.html">The big three</a>
-      <a href="work.html">By job</a>
-      <a href="clones.html">Clones</a>
+      <a href="occasions/work.html">Occasions</a>
+      <a href="clones.html">Cheaper bottles</a>
+      <a href="methodology.html">How we test</a>
     </div>
-    <a class="btn" href="index.html#quiz">Find a scent</a>
+    <a class="btn" href="index.html#find">Find a scent</a>
   </nav>
-  <header class="page-hero">
-    <p class="kicker">About</p>
-    <h1>A desk, not a store.</h1>
-    <p>Menscents tells you what to smell first, then links to the sample, the bottle, or the clone. We do not sell fragrance and we do not ship orders.</p>
-  </header>
-  <article class="prose">
-    <p>The site is published by Menscents. The limited liability company is planned and not yet filed. Until it is, the publisher is the person operating this site.</p>
-    <p>Recommendations are opinions. Closeness scores are estimates, not lab tests. Prices on the homepage are examples until affiliate accounts are connected.</p>
-    <p>Contact: hello@menscents.com once the domain is live. Until then, the quiz email stays on this browser only.</p>
-  </article>
+  <div class="mast"><span>Men's cologne, with an opinion</span><span>Smell it before you spend</span></div>
+  
+<header class="sec" style="padding-top:28px">
+  <p class="role">About</p>
+  <h1>About</h1>
+</header>
+<article class="prose">
+          <p>Menscents is a cologne guide for regular guys. One pick, a price you can live with, and a cheaper alternative. We do not sell fragrance and we do not ship orders.</p>
+          <p>Published by Menscents. The LLC is planned. Contact: hello@menscents.com once the inbox exists.</p>
+        </article>
+
   <footer>
-    <div class="foot">
-      <div class="brand"><strong>Menscents</strong></div>
-      <p><a href="privacy.html">Privacy</a></p>
+    <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <div>
+        <a class="brand" href="index.html">Menscents</a>
+        <p><a href="about.html">About</a> · <a href="disclosure.html">Affiliate disclosure</a> · <a href="privacy.html">Privacy</a> · <a href="methodology.html">Methodology</a></p>
+      </div>
+      <form class="capture" action="#" method="POST">
+        <input type="email" name="email" placeholder="Email" required />
+        <button class="btn" type="submit">Get the weekly pick</button>
+      </form>
     </div>
+    <p>One pick a week, with what it costs to wear.</p>
+    <p class="disc">If you buy through a link, Menscents may earn a commission at no extra cost to you. We do not sell the bottle.</p>
   </footer>
 </div>
+<script>
+document.querySelector('.menu')?.addEventListener('click', function(){
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+document.querySelectorAll('a[data-track]').forEach(function(a){
+  a.addEventListener('click', function(){
+    if (window.gtag) gtag('event', 'outbound_click', {bottle: a.dataset.bottle || '', retailer: a.dataset.retailer || '', kind: a.dataset.track});
+  });
+});
+document.querySelectorAll('form.capture').forEach(function(form){
+  form.addEventListener('submit', function(e){
+    if (!form.action || form.action.endsWith('#')) {
+      e.preventDefault();
+      var note = form.parentElement.querySelector('.disc') || form.nextElementSibling;
+      if (note) note.textContent = 'List is not connected yet. Drop the provider URL into data/site.yaml.';
+    }
+  });
+});
+</script>
 </body>
 </html>

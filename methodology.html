@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How we test: Menscents</title>
+<meta name="description" content="How we test" />
+<link rel="canonical" href="https://menscents.com/methodology.html" />
+<meta property="og:title" content="How we test: Menscents" />
+<meta property="og:description" content="How we test" />
+<meta property="og:image" content="https://menscents.com/assets/MNlz4.jpg" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@420;520;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/site.css" />
+
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <a class="brand" href="index.html">Menscents</a>
+    <button class="menu" type="button" aria-label="Menu">Menu</button>
+    <div class="nav-links">
+      <a href="compare.html">The big three</a>
+      <a href="occasions/work.html">Occasions</a>
+      <a href="clones.html">Cheaper bottles</a>
+      <a href="methodology.html">How we test</a>
+    </div>
+    <a class="btn" href="index.html#find">Find a scent</a>
+  </nav>
+  <div class="mast"><span>Men's cologne, with an opinion</span><span>Smell it before you spend</span></div>
+  
+<header class="sec" style="padding-top:28px">
+  <p class="role">Methodology</p>
+  <h1>How we test</h1>
+</header>
+<article class="prose">
+          <h2>Wear tests</h2>
+          <p>Same protocol every time. Skin, not a shirt. We note the date, indoors or out, rough temperature, sprays, and where they went. Then the opening, the middle, and the drydown, plus check-ins at 2, 5, and 8 hours. If a bottle has not been tested, the page says so.</p>
+          <h2>Clone tiers</h2>
+          <p><b>Close.</b> Same shape. You would recognize it. The polish or the opening is off.</p>
+          <p><b>Decent.</b> Same family. You get the idea. It is not the bottle.</p>
+          <p><b>Different.</b> Inspired by it. A different wear.</p>
+          <p>We do not publish a percentage. We do not have a lab match.</p>
+          <h2>Cost per wear</h2>
+          <p>Four sprays, about 0.1 ml each, so 0.4 ml a wear. Cost per wear is the bottle price divided by how many wears that size gives. It is an assumption, not a measurement of your wrist.</p>
+          <h2>Prices</h2>
+          <p>Every price shows the date it was checked. Desk prices are not a live feed.</p>
+          <h2>Questions</h2>
+          <p><b>How many sprays?</b> Two on skin for the office. Four is the cost-per-wear assumption, not a recommendation to load up.</p>
+          <p><b>Is a clone the same bottle?</b> No. Close means you would recognize it. It is still a different product.</p>
+          <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How many sprays?","acceptedAnswer":{"@type":"Answer","text":"Two on skin for the office. Four is the cost-per-wear assumption, not a recommendation to load up."}},{"@type":"Question","name":"Is a clone the same bottle?","acceptedAnswer":{"@type":"Answer","text":"No. Close means you would recognize it. It is still a different product."}}]}</script>
+        </article>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <div>
+        <a class="brand" href="index.html">Menscents</a>
+        <p><a href="about.html">About</a> · <a href="disclosure.html">Affiliate disclosure</a> · <a href="privacy.html">Privacy</a> · <a href="methodology.html">Methodology</a></p>
+      </div>
+      <form class="capture" action="#" method="POST">
+        <input type="email" name="email" placeholder="Email" required />
+        <button class="btn" type="submit">Get the weekly pick</button>
+      </form>
+    </div>
+    <p>One pick a week, with what it costs to wear.</p>
+    <p class="disc">If you buy through a link, Menscents may earn a commission at no extra cost to you. We do not sell the bottle.</p>
+  </footer>
+</div>
+<script>
+document.querySelector('.menu')?.addEventListener('click', function(){
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+document.querySelectorAll('a[data-track]').forEach(function(a){
+  a.addEventListener('click', function(){
+    if (window.gtag) gtag('event', 'outbound_click', {bottle: a.dataset.bottle || '', retailer: a.dataset.retailer || '', kind: a.dataset.track});
+  });
+});
+document.querySelectorAll('form.capture').forEach(function(form){
+  form.addEventListener('submit', function(e){
+    if (!form.action || form.action.endsWith('#')) {
+      e.preventDefault();
+      var note = form.parentElement.querySelector('.disc') || form.nextElementSibling;
+      if (note) note.textContent = 'List is not connected yet. Drop the provider URL into data/site.yaml.';
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bleu de Chanel: does it last? Wear test</title>
+<meta name="description" content="The one to buy if you only buy one. Two sprays. It will not walk into the meeting before you do." />
+<link rel="canonical" href="https://menscents.com/bottle/bleu-de-chanel.html" />
+<meta property="og:title" content="Bleu de Chanel: does it last? Wear test" />
+<meta property="og:description" content="The one to buy if you only buy one. Two sprays. It will not walk into the meeting before you do." />
+<meta property="og:image" content="https://menscents.com/assets/MNlz4.jpg" />
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@420;520;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/site.css" />
+
+</head>
+<body>
+<div class="wrap">
+  <nav class="top">
+    <a class="brand" href="../index.html">Menscents</a>
+    <button class="menu" type="button" aria-label="Menu">Menu</button>
+    <div class="nav-links">
+      <a href="../compare.html">The big three</a>
+      <a href="../occasions/work.html">Occasions</a>
+      <a href="../clones.html">Cheaper bottles</a>
+      <a href="../methodology.html">How we test</a>
+    </div>
+    <a class="btn" href="../index.html#find">Find a scent</a>
+  </nav>
+  <div class="mast"><span>Men's cologne, with an opinion</span><span>Smell it before you spend</span></div>
+  
+<header class="sec" style="padding-top:28px">
+  <p class="role">Chanel · EDP</p>
+  <h1>Bleu de Chanel</h1>
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Bleu de Chanel","dateModified":"2026-10-11","author":{"@type":"Organization","name":"Menscents"},"description":"The one to buy if you only buy one. Two sprays. It will not walk into the meeting before you do."}
+</script>
+<p class="muted">Updated 2026-10-11. Two sprays on skin, not six on a shirt.</p>
+</header>
+<div class="facts">
+  <div class="fact"><b>Cost per wear</b>$0.45</div>
+  <div class="fact"><b>Bottle</b>$112 for 100 ml</div>
+  <div class="fact"><b>Checked</b>2026-10-11</div>
+  <div class="fact"><b>Skip if</b>Skip if you want to stand out.</div>
+</div>
+
+<section class="test"><p class="role">Wear test</p><p>Not tested yet.</p></section>
+
+<div class="actions">
+  <a class="primary" data-track="sample" data-bottle="bleu-de-chanel" data-retailer="Scent Split" href="https://www.scentsplit.com/search?q=bleu+de+chanel+eau+de+parfum">Sample on Scent Split</a>
+  <a data-track="bottle" data-bottle="bleu-de-chanel" data-retailer="Amazon" href="https://www.amazon.com/dp/B00NAH3GNI">Bottle on Amazon</a>
+  <a data-track="bottle" data-bottle="bleu-de-chanel" data-retailer="FragranceX" href="https://www.fragrancex.com/products/_cid_cologne-am-lid_c-am-lid_c__brands_chanel-am-lid_b-am-lid_b__s_bleu+de+chanel.html">Also at FragranceX</a>
+</div>
+<p class="disc">We may earn a commission if you buy through these links. No extra cost to you.</p>
+
+<p>Cheaper alternative: <a href="../versus/dossier-woody.html">Woody dupe, Decent</a>.</p>
+
+
+<form class="capture" action="#" method="POST" style="margin-top:24px">
+  <input type="email" name="email" placeholder="Email" required />
+  <button class="btn" type="submit">Get the weekly pick</button>
+</form>
+<p class="muted">One pick a week, with what it costs to wear.</p>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <div>
+        <a class="brand" href="../index.html">Menscents</a>
+        <p><a href="../about.html">About</a> · <a href="../disclosure.html">Affiliate disclosure</a> · <a href="../privacy.html">Privacy</a> · <a href="../methodology.html">Methodology</a></p>
+      </div>
+      <form class="capture" action="#" method="POST">
+        <input type="email" name="email" placeholder="Email" required />
+        <button class="btn" type="submit">Get the weekly pick</button>
+      </form>
+    </div>
+    <p>One pick a week, with what it costs to wear.</p>
+    <p class="disc">If you buy through a link, Menscents may earn a commission at no extra cost to you. We do not sell the bottle.</p>
+  </footer>
+</div>
+<script>
+document.querySelector('.menu')?.addEventListener('click', function(){
+  document.querySelector('.nav-links').classList.toggle('open');
+});
+document.querySelectorAll('a[data-track]').forEach(function(a){
+  a.addEventListener('click', function(){
+    if (window.gtag) gtag('event', 'outbound_click', {bottle: a.dataset.bottle || '', retailer: a.dataset.retailer || '', kind: a.dataset.track});
+  });
+});
+document.querySelectorAll('form.capture').forEach(function(form){
+  form.addEventListener('submit', function(e){
+    if (!form.action || form.action.endsWith('#')) {
+      e.preventDefault();
+      var note = form.parentElement.querySelector('.disc') || form.nextElementSibling;
+      if (note) note.textContent = 'List is not connected yet. Drop the provider URL into data/site.yaml.';
+    }
+  });
+});
+</script>
+</body>
+</html>
