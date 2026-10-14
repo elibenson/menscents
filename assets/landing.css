@@ -65,3 +65,8 @@ footer { background: #111; color: #fff; padding: 28px 40px 18px; }
   .signup { display: block; }
   .signup form { width: 100%; margin-top: 16px; }
 }
+
+.card-actions { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+.card-actions .mini { font-size: 11px; letter-spacing: 0.04em; padding: 6px 8px; background: #111; color: #fff; text-decoration: none; }
+.card-actions .mini:hover { background: #333; }
+
