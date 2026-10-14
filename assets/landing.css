@@ -70,3 +70,32 @@ footer { background: #111; color: #fff; padding: 28px 40px 18px; }
 .card-actions .mini { font-size: 11px; letter-spacing: 0.04em; padding: 6px 8px; background: #111; color: #fff; text-decoration: none; }
 .card-actions .mini:hover { background: #333; }
 
+
+/* Guides section */
+.guides { padding: 48px 20px; background: #faf8f5; }
+.guides .picks-head { max-width: 1200px; margin: 0 auto 20px; }
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.guide-grid a {
+  display: block;
+  background: #fff;
+  padding: 20px 18px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #eee;
+  transition: border-color 0.15s;
+}
+.guide-grid a:hover { border-color: #111; }
+.guide-grid .kicker { display: block; margin-bottom: 8px; }
+.guide-grid b { display: block; font-size: 16px; margin-bottom: 6px; line-height: 1.3; }
+.guide-grid span:last-child { display: block; color: #666; font-size: 13px; line-height: 1.4; }
+
+@media (max-width: 700px) {
+  .guide-grid { grid-template-columns: 1fr; }
+  .guides { padding: 32px 16px; }
+}
