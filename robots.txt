@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.menscents.com/sitemap.xml
+Sitemap: https://menscents.com/sitemap.xml

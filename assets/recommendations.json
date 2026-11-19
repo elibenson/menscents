@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "bleu-de-chanel",
+    "name": "Bleu de Chanel Eau de Parfum",
+    "brand": "Chanel",
+    "family": "woody",
+    "occasion": "everyday",
+    "tier": "premium",
+    "notes": "Citrus · incense · woods",
+    "angle": "Versatile, polished, quietly confident",
+    "href": "bottle/bleu-de-chanel.html"
+  },
+  {
+    "slug": "sauvage-edp",
+    "name": "Dior Sauvage Eau de Parfum",
+    "brand": "Dior",
+    "family": "fresh",
+    "occasion": "everyday",
+    "tier": "premium",
+    "notes": "Bergamot · spice · vanilla",
+    "angle": "Fresh energy with a warm base",
+    "href": "bottle/sauvage-edp.html"
+  },
+  {
+    "slug": "aventus",
+    "name": "Creed Aventus",
+    "brand": "Creed",
+    "family": "woody",
+    "occasion": "evening",
+    "tier": "luxury",
+    "notes": "Pineapple · birch · woods",
+    "angle": "Distinctive fruit-and-wood contrast",
+    "href": "bottle/aventus.html"
+  },
+  {
+    "slug": "ysl-y-edp",
+    "name": "Y Eau de Parfum",
+    "brand": "Yves Saint Laurent",
+    "family": "fresh",
+    "occasion": "everyday",
+    "tier": "premium",
+    "notes": "Apple · sage · woods",
+    "angle": "Modern, energetic, approachable",
+    "href": "bottle/ysl-y-edp.html"
+  },
+  {
+    "slug": "sauvage-elixir",
+    "name": "Sauvage Elixir",
+    "brand": "Dior",
+    "family": "bold",
+    "occasion": "evening",
+    "tier": "luxury",
+    "notes": "Spices · lavender · woods",
+    "angle": "Dense, assertive, evening-leaning",
+    "href": "bottle/sauvage-elixir.html"
+  },
+  {
+    "slug": "cdnim",
+    "name": "Club de Nuit Intense Man",
+    "brand": "Armaf",
+    "family": "woody",
+    "occasion": "everyday",
+    "tier": "value",
+    "notes": "Citrus · fruit · woods",
+    "angle": "A budget-conscious fruity-woody option",
+    "href": "bottle/cdnim.html"
+  },
+  {
+    "slug": "asad",
+    "name": "Asad",
+    "brand": "Lattafa",
+    "family": "warm",
+    "occasion": "evening",
+    "tier": "value",
+    "notes": "Spices · amber · vanilla",
+    "angle": "Warm, bold, value-focused",
+    "href": "bottle/asad.html"
+  },
+  {
+    "slug": "dossier-woody",
+    "name": "Woody Oakmoss",
+    "brand": "Dossier",
+    "family": "woody",
+    "occasion": "everyday",
+    "tier": "value",
+    "notes": "Oakmoss · woods · fruit",
+    "angle": "An approachable woody direction",
+    "href": "bottle/dossier-woody.html"
+  }
+]

@@ -1,0 +1,9 @@
+(()=>{'use strict';const data=window.MENSCENTS_CATALOG||[],$=id=>document.getElementById(id),a=$('compare-a'),b=$('compare-b'),out=$('compare-output');if(!a||!b)return;
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+for(const el of [a,b]){data.forEach(p=>{const o=document.createElement('option');o.value=p.slug;o.textContent=p.name;el.append(o);});el.addEventListener('change',render);}
+function render(){const x=data.find(p=>p.slug===a.value),y=data.find(p=>p.slug===b.value);if(!x||!y)return; if(x.slug===y.slug){out.innerHTML='<p class="fine" role="status">Choose two different fragrances to see a comparison.</p>';return;}
+const row=(label,fn)=>`<tr><th scope="row">${label}</th><td>${esc(fn(x))}</td><td>${esc(fn(y))}</td></tr>`;
+out.innerHTML=`<div class="compare-scroll"><table class="comparison-table"><thead><tr><th>COMPARE</th><th>${esc(x.name)}</th><th>${esc(y.name)}</th></tr></thead><tbody>${row('Scent direction',p=>p.family)}${row('Typical use',p=>p.occasion)}${row('Price tier',p=>p.tier)}${row('Reported note direction',p=>p.notes)}${row('Editorial perspective',p=>p.angle)}</tbody></table></div><div class="compare-links"><a class="button gold" href="${esc(x.profileUrl)}">Explore ${esc(x.brand)} ↗</a><a class="button ghost" href="${esc(y.profileUrl)}">Explore ${esc(y.brand)} ↗</a></div><p class="fine">Editorial comparison, not a laboratory or wear-test result. Price tiers are relative, not live retailer prices.</p>`;
+const params=new URLSearchParams({a:x.slug,b:y.slug});history.replaceState(null,'',location.pathname+'?'+params);if(window.menscentsTrack)window.menscentsTrack('comparison_view',{a:x.slug,b:y.slug});}
+const q=new URLSearchParams(location.search);a.value=data.some(p=>p.slug===q.get('a'))?q.get('a'):'bleu-de-chanel';b.value=data.some(p=>p.slug===q.get('b'))?q.get('b'):'sauvage-edp';render();
+})();
