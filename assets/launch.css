@@ -138,3 +138,12 @@
 /* Authentic bottle photographs are kept distinct from editorial imagery. */
 .edit-card:nth-child(-n+2) .edit-image {background:#f2f0ed;}
 .edit-card:nth-child(-n+2) .edit-image img {object-fit:contain;background:#f2f0ed;}
+
+/* 2026-11-19: Editorial card image sizing — override global img height:100%. */
+.balanced-stories{align-items:start;grid-auto-rows:auto;row-gap:32px}
+.balanced-story{height:auto;min-height:0;display:flex;flex-direction:column;align-self:start;overflow:visible}
+.balanced-story>img{display:block;width:100%;height:auto!important;aspect-ratio:16/10;object-fit:cover;flex:none;margin:0 0 18px}
+.balanced-story>.eyebrow{display:block;position:static;line-height:1.5;margin:0 0 8px}
+.balanced-story>h3{position:static;margin:0 0 10px;line-height:1.2}
+.balanced-story>p{position:static;margin:0;line-height:1.6}
+@media(max-width:650px){.balanced-stories{row-gap:30px}}
